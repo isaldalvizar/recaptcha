@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
     // Sending our HTML file to browser.
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile('./views/index.html', { root:__dirname });
 });
 
 app.post('/submit', function (req, res) {
